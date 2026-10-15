@@ -1,0 +1,33 @@
+/* Aplicar em todos */
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  text-decoration: none;
+}
+
+/* Configuração de Classes */
+.topoSite {
+  background-color: #fff2ec;
+  width: 100vw;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  border-bottom: solid #2a7282 2px;
+}
+
+.logo {
+  float: left;
+  width: 100px;
+  height: 100px;
+  padding: 10px 0 5px 5px;
+}
+
+.links {
+  color: #2a7282;
+}
+
+/* Configuração de Elementos */
+body {
+  background-color: #f5f8f8;
+}
