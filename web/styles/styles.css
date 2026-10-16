@@ -22,6 +22,8 @@ body {
 
 .aLogo {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 25vw;
   height: 13vw;
 }
@@ -29,7 +31,7 @@ body {
 .logoSite {
   width: 100px;
   height: 100px;
-  padding: 0 0 0 5px;
+  padding: 5px 0 0 5px;
 }
 
 header nav {
