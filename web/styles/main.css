@@ -1,0 +1,15 @@
+/* Formatação Geral */
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  text-decoration: none;
+}
+
+main {
+  background-color: #f5f8f8;
+  height: 70vh;
+}
+
+/* Responsividade Usando @media */
