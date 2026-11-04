@@ -1,15 +1,126 @@
-/* Formatação Geral */
-
 * {
   padding: 0;
   margin: 0;
   border: none;
   text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
 }
 
 main {
   background-color: #f5f8f8;
-  height: 70vh;
+  flex: 1;
+  width: 100%;
+  padding: 20px 0;
 }
 
-/* Responsividade Usando @media */
+h1 {
+  width: 100%;
+  text-align: center;
+  padding: 15px 16px;
+  color: #2a7282;
+  font-size: 36px;
+}
+
+.carrossel {
+  position: relative;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.janela {
+  overflow: hidden;
+  width: 100%;
+}
+
+.trilho {
+  display: flex;
+  transition: transform 0.4s ease;
+  width: 100%;
+}
+
+.slide {
+  flex: 0 0 100%;
+  width: 100%;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff2ec;
+  padding: 40px 60px;
+}
+
+.carrosselText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 26px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.carrosselTextTitle {
+  font-weight: bold;
+  font-size: 24px;
+  padding-bottom: 12px;
+}
+
+.seta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  border: none;
+  background-color: #2a7282;
+  color: #fff2ec;
+  font-size: 20px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.seta:hover {
+  background-color: #004e5d;
+}
+
+.esquerda {
+  left: 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.direita {
+  right: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .slide {
+    padding: 30px 45px;
+    min-height: 200px;
+  }
+
+  .carrosselTexto {
+    font-size: 15px;
+  }
+
+  .carrosselTextoTitle {
+    font-size: 20px;
+  }
+
+  .seta {
+    font-size: 16px;
+    padding: 8px 10px;
+  }
+}

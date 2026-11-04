@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,41 +10,55 @@
   </head>
 
   <body>
-    <header>
-      <a href="./index.html" target="_self" class="logoSite">
-        <img src="./assets/SandrinhosLogo.png" alt="SandrinhosLogo" />
-      </a>
-      <nav>
-        <a href="#sobreLoc" class="linkSite">Sobre</a>
-        <a href="#" class="linkSite">Link 2</a>
-        <a href="#" class="linkSite">Link 3</a>
-      </nav>
-      <div class="loginVendasDiv">
-        <a href="" class="linkSite">
-          <img class="loginIco" src="./assets/LoginIco.png" alt="LoginIcon" />
-          <br />Login
-        </a>
-        <a href="" class="linkSite">
-          <img class="cartIco" src="./assets/CartIco.png" alt="CartIcon" />
-          <br />Vendas
-        </a>
-      </div>
-    </header>
+    <div id="headerPlaceholder"></div>
 
     <main>
-      <div>
-        <h1 id="sobreLoc">Nome Petshop</h1>
-      </div>
+      <h1 id="sobreLoc">Sandrinho's Petshop</h1>
+
+      <section class="carrossel">
+        <button class="seta esquerda" aria-label="Anterior">&#10094;</button>
+
+        <div class="janela">
+          <div class="trilho">
+            <div class="slide">
+              <div class="carrosselText">
+                <div class="carrosselTextTitle">Quem Somos</div>
+                <div>
+                  Um petshop de qualidade que oferece a melhor gama de serviços
+                  para o seu melhor amigo, com garantia para todos os pets!
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="carrosselText">
+                <div class="carrosselTextTitle">Nossa História</div>
+                <div>
+                  Começamos como um serviço nos fundos de uma casa, e evoluímos
+                  para uma rede comercial que leva a sensaçao de um lar para o
+                  seu pet!
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="carrosselText">
+                <div class="carrosselTextTitle">Satisfação do Cliente</div>
+                <div>
+                  Sete à cada dez clientes retornam para buscar os nossos
+                  serviços, todos com elogios para os nossos funcionários
+                  habilidatos!
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="seta direita" aria-label="Próximo">&#10095;</button>
+      </section>
     </main>
 
-    <footer>
-      <div class="infoContato">
-        <h2>Fale conosco:</h2>
-        <p>sandrinhoatendimento@gmail.com</p>
-      </div>
-      <a href="https://wa.me" target="_blank" class="phoneBtn">
-        <img src="./assets/PhoneIco.png" alt="PhoneIcon" class="phoneIco" />
-      </a>
-    </footer>
+    <div id="footerPlaceholder"></div>
+
+    <script src="./scripts/include.js"></script>
+    <script src="./scripts/carrossel.js"></script>
   </body>
 </html>
