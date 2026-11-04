@@ -1,0 +1,44 @@
+/* Formatação Geral */
+
+footer {
+  background-color: #2a7282;
+  color: #fff2ec;
+  width: 100vw;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  border-top: solid #fff2ec 2px;
+}
+
+/* Botão Whatsapp */
+
+.phoneBtn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 20vw;
+  height: 15vh;
+}
+
+.phoneIco {
+  padding-right: 10px;
+  width: 60px;
+  height: 60px;
+}
+
+/* Informações de Contato */
+
+.infoContato {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0 0 15px;
+  width: 80vw;
+  height: 15vh;
+}
+
+@media screen and (max-width: 375px) {
+  .infoContato {
+    font-size: 10pt;
+  }
+}

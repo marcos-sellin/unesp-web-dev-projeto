@@ -1,0 +1,114 @@
+/* Formatação Geral */
+
+header {
+  background-color: #fff2ec;
+  width: 100vw;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  border-bottom: solid #2a7282 2px;
+}
+
+/* Logo do Site */
+
+.logoSite {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-height: 93px;
+}
+
+.logoSite img {
+  width: 100px;
+  height: 100px;
+  padding: 5px 0 0 5px;
+}
+
+/* Links de Navegação */
+
+header nav {
+  display: flex;
+  width: 50vw;
+  height: 15vh;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.linkSite {
+  padding: 55px 0 0 0;
+  color: #2a7282;
+  font-size: 19px;
+}
+
+.linkSite:hover {
+  color: #004e5d;
+}
+
+.loginVendasDiv {
+  display: flex;
+  padding: 0 5px 0 5px;
+  width: calc(50vw - 100px);
+  height: 15vh;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 19px;
+}
+
+.loginVendasDiv a {
+  padding: 25px 0 0 0;
+}
+
+.loginIco {
+  width: 25px;
+  height: 25px;
+  margin: 0 0 0 8px;
+}
+
+.cartIco {
+  width: 25px;
+  height: 25px;
+  margin: 0 0 0 14px;
+}
+
+@media screen and (min-width: 600px) {
+  .linkSite {
+    font-size: 25px;
+  }
+
+  .loginVendasDiv {
+    font-size: 25px;
+  }
+
+  .loginIco {
+    margin: 0 0 0 15px;
+  }
+
+  .cartIco {
+    margin: 0 0 0 25px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .logoSite {
+    display: none;
+  }
+
+  .topoSite {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .loginVendasDiv {
+    width: 40vw;
+    padding: 0 5px 0 5px;
+    justify-content: space-around;
+  }
+
+  header nav {
+    width: 60vw;
+    padding: 0 15px 0 15px;
+    justify-content: space-between;
+  }
+}
