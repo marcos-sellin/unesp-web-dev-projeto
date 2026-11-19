@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./styles/header.css" />
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/carrinho.css" />
     <title>Sandrinhos Menu</title>
   </head>
 
@@ -16,26 +17,52 @@
       </a>
       <nav>
         <a href="#sobreLoc" class="linkSite">Sobre</a>
-        <a href="#" class="linkSite">Link 2</a>
+        <!-- Leva para a página exclusiva de produtos -->
+        <a href="./produtos.html" class="linkSite">Produtos</a>
         <a href="#" class="linkSite">Link 3</a>
       </nav>
       <div class="loginVendasDiv">
-        <a href="login.html" class="linkSite">
+        <a href="" class="linkSite">
           <img class="loginIco" src="./assets/LoginIco.png" alt="LoginIcon" />
           <br />Login
         </a>
-        <a href="" class="linkSite">
-          <img class="cartIco" src="./assets/CartIco.png" alt="CartIcon" />
-          <br />Carrinho
+        <a href="#" id="btn-abrir-carrinho" class="linkSite">
+          <span class="cart-icon-wrapper">
+            <img class="cartIco" src="./assets/CartIco.png" alt="CartIcon" />
+            <span id="contador-carrinho" class="badge-carrinho">0</span>
+          </span>
+          <br />Vendas
         </a>
       </div>
     </header>
 
     <main>
       <div>
-        <h1 id="sobreLoc">Nome Petshop</h1>
+        <h1 id="sobreLoc">Sandrinhos Petshop</h1>
       </div>
     </main>
+
+    <!-- PAINEL LATERAL (Gaveta vindo da direita) -->
+    <div id="modal-carrinho" class="drawer-overlay">
+      <div class="drawer-conteudo">
+        <div class="drawer-header">
+          <h2>🛒 Vendas / Carrinho</h2>
+          <button id="btn-fechar-carrinho" class="btn-fechar">&times;</button>
+        </div>
+
+        <div id="lista-itens-carrinho" class="drawer-body"></div>
+
+        <div class="drawer-footer">
+          <div class="total-container">
+            <span>Total do Pedido:</span>
+            <strong id="valor-total">R$ 0,00</strong>
+          </div>
+          <button class="btn-checkout" onclick="irParaCompra()">
+            Ir para a Compra
+          </button>
+        </div>
+      </div>
+    </div>
 
     <footer>
       <div class="infoContato">
@@ -46,5 +73,7 @@
         <img src="./assets/PhoneIco.png" alt="PhoneIcon" class="phoneIco" />
       </a>
     </footer>
+
+    <script src="./scripts/carrinho.js"></script>
   </body>
 </html>
