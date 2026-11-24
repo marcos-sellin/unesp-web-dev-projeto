@@ -37,6 +37,8 @@ h1 {
 .janela {
   overflow: hidden;
   width: 100%;
+  border-top: solid 2px #2a7282;
+  border-bottom: solid 2px #2a7282;
 }
 
 .trilho {
