@@ -28,6 +28,14 @@ h1 {
   font-size: 36px;
 }
 
+h2 {
+  width: 100%;
+  text-align: center;
+  padding: 15px 16px;
+  color: #2a7282;
+  font-size: 24px;
+}
+
 .carrossel {
   position: relative;
   width: 100%;
@@ -108,16 +116,20 @@ h1 {
     font-size: 24px;
   }
 
+  h2 {
+    font-size: 20px;
+  }
+
   .slide {
     padding: 30px 45px;
     min-height: 200px;
   }
 
-  .carrosselTexto {
+  .carrosselText {
     font-size: 15px;
   }
 
-  .carrosselTextoTitle {
+  .carrosselTextTitle {
     font-size: 20px;
   }
 

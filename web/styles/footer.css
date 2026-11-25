@@ -10,6 +10,15 @@ footer {
   border-top: solid #fff2ec 2px;
 }
 
+footer h2 {
+  background-color: #2a7282;
+  color: #fff2ec;
+  width: 100%;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+}
+
 /* Botão Whatsapp */
 
 .phoneBtn {
@@ -17,12 +26,14 @@ footer {
   justify-content: flex-end;
   align-items: center;
   width: 20%;
+  flex-shrink: 0;
 }
 
 .phoneIco {
   padding-right: 10px;
   width: 70px;
-  height: 60px;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Informações de Contato */
@@ -33,10 +44,28 @@ footer {
   justify-content: center;
   padding: 0 0 0 15px;
   width: 80%;
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
 @media screen and (max-width: 375px) {
   .infoContato {
     font-size: 10pt;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .phoneBtn {
+    width: 25%;
+  }
+
+  .phoneIco {
+    width: 50px;
+    padding-right: 5px;
+  }
+
+  .infoContato {
+    width: 75%;
+    padding-left: 10px;
   }
 }

@@ -3,9 +3,10 @@
 header {
   background-color: #fff2ec;
   width: 100%;
-  height: 15%;
+  min-height: 15%;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   border-bottom: solid #2a7282 2px;
 }
 
@@ -22,7 +23,8 @@ header {
 
 .logoSite img {
   width: 100px;
-  height: 100px;
+  max-width: 100%;
+  height: auto;
   padding: 5px 0 0 5px;
 }
 
@@ -72,6 +74,37 @@ header nav {
   margin: 0 0 0 14px;
 }
 
+.btn-logout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 0 0 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: #2a7282;
+  cursor: pointer;
+}
+
+.btn-logout:hover {
+  color: #004e5d;
+}
+
+.btn-logout:focus-visible {
+  outline: 2px solid #2a7282;
+  outline-offset: 4px;
+}
+
+.logoutIco {
+  width: 25px;
+  height: 25px;
+  stroke: #000;
+}
+
+.btn-logout[hidden] {
+  display: none;
+}
+
 @media screen and (min-width: 600px) {
   .linkSite {
     font-size: 25px;
@@ -110,5 +143,21 @@ header nav {
     width: 55%;
     padding: 0 10px 0 10px;
     justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .linkSite,
+  .loginVendasDiv {
+    font-size: 16px;
+  }
+
+  .linkSite {
+    padding-top: 25px;
+  }
+
+  .loginIco,
+  .cartIco {
+    margin-left: 6px;
   }
 }
