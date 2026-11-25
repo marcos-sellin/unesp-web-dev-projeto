@@ -134,6 +134,7 @@ function usuarioLogado() {
 // ===================== Drawer (abrir/fechar) =====================
 function abrirCarrinho() {
   const modal = document.getElementById('modal-carrinho');
+  document.body.classList.add('drawer-aberto');
   if (!modal) return;
   renderizarCarrinho();
   modal.classList.add('ativo');
@@ -141,7 +142,10 @@ function abrirCarrinho() {
 
 function fecharCarrinho() {
   const modal = document.getElementById('modal-carrinho');
-  if (modal) modal.classList.remove('ativo');
+  if (modal){
+    modal.classList.remove('ativo');
+    document.body.classList.remove('drawer-aberto');
+  }
 }
 
 // Se a página não tiver o drawer no HTML, ele é criado aqui.

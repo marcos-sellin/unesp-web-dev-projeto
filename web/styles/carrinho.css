@@ -9,12 +9,15 @@
   position: absolute;
   top: -8px;
   right: -12px;
+  min-width: 18px;
+  padding: 2px 5px;
   background-color: #d9534f;
   color: #ffffff;
-  font-size: 11px;
+  font-size: 0.7rem;
   font-weight: bold;
-  padding: 2px 5px;
-  border-radius: 50%;
+  line-height: 1.2;
+  text-align: center;
+  border-radius: 999px;
   border: 1px solid #fff2ec;
 }
 
@@ -22,23 +25,24 @@
 .titulo-secao {
   text-align: center;
   color: #2a7282;
+  font-size: clamp(1.4rem, 4vw, 2rem);
   padding: 25px 10px 10px 10px;
 }
 
 .vitrine-produtos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
-  padding: 20px 30px 45px 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+  gap: clamp(14px, 3vw, 24px);
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: clamp(14px, 3vw, 20px) clamp(14px, 4vw, 30px) clamp(30px, 5vw, 45px);
 }
 
 .produto-card {
   background-color: #fff2ec;
   border: 2px solid #2a7282;
   border-radius: 12px;
-  width: 260px;
-  padding: 20px;
+  padding: clamp(14px, 3vw, 20px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -46,10 +50,9 @@
   box-shadow: 0 4px 10px rgba(42, 114, 130, 0.12);
 }
 
-/* Imagem do produto no card */
 .produto-img {
   width: 100%;
-  height: 160px;
+  aspect-ratio: 4 / 3;
   object-fit: contain;
   background-color: #ffffff;
   border-radius: 8px;
@@ -82,31 +85,28 @@
   background-color: #2a7282;
   color: #fff2ec;
   border: none;
-  padding: 10px;
+  padding: 12px 10px;
   width: 100%;
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
   font-size: 0.95rem;
-  transition: background 0.2s;
-}
-
-.btn-add-card:hover {
-  background-color: #004e5d;
+  transition: background-color 0.2s;
 }
 
 .controles-ativos-card {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 5px;
+  justify-content: center;
+  gap: 8px;
 }
 
 .btn-qtd-card {
   background-color: #2a7282;
   color: #fff2ec;
   border: none;
-  width: 32px;
+  width: 36px;
   height: 36px;
   border-radius: 6px;
   font-weight: bold;
@@ -124,7 +124,7 @@
   background-color: #d9534f;
   color: #ffffff;
   border: none;
-  padding: 8px 8px;
+  padding: 0 10px;
   height: 36px;
   border-radius: 6px;
   font-weight: bold;
@@ -135,10 +135,7 @@
 /* --- PAINEL LATERAL VINDO DA DIREITA (DRAWER) --- */
 .drawer-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 9999;
   opacity: 0;
@@ -152,23 +149,23 @@
 }
 
 .drawer-conteudo {
-  position: fixed;
+  position: absolute;
   top: 0;
-  right: -440px;
-  width: 100%;
-  max-width: 410px;
-  height: 100vh;
+  right: 0;
+  bottom: 0;
+  width: min(100%, 410px);
   background-color: #fff2ec;
   border-left: 3px solid #2a7282;
-  padding: 20px;
+  padding: clamp(14px, 4vw, 20px);
   box-shadow: -6px 0 20px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
-  transition: right 0.35s ease;
+  transform: translateX(100%);
+  transition: transform 0.35s ease;
 }
 
 .drawer-overlay.ativo .drawer-conteudo {
-  right: 0;
+  transform: translateX(0);
 }
 
 .drawer-header {
@@ -187,19 +184,21 @@
   color: #2a7282;
   cursor: pointer;
   line-height: 1;
+  padding: 0 6px;
 }
 
 .drawer-body {
   margin: 15px 0;
   overflow-y: auto;
+  overscroll-behavior: contain;
   flex-grow: 1;
 }
 
-/* Item dentro da gaveta lateral com miniatura da imagem */
+/* Item dentro da gaveta lateral */
 .item-carrinho {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
   gap: 10px;
   padding: 10px;
   background-color: #ffffff;
@@ -218,7 +217,8 @@
 }
 
 .item-info {
-  flex-grow: 1;
+  flex: 1 1 120px;
+  min-width: 0;
 }
 
 .item-info h4 {
@@ -236,15 +236,15 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  flex-shrink: 0;
+  margin-left: auto;
 }
 
 .btn-qtd {
   background-color: #2a7282;
   color: #fff2ec;
   border: none;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
@@ -254,7 +254,7 @@
   background-color: #d9534f;
   color: white;
   border: none;
-  padding: 4px 6px;
+  padding: 6px 8px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 0.75rem;
@@ -271,12 +271,13 @@
 .drawer-footer {
   border-top: 2px solid #2a7282;
   padding-top: 15px;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 .total-container {
   display: flex;
   justify-content: space-between;
-  font-size: 1.2rem;
+  font-size: clamp(1.05rem, 3.5vw, 1.2rem);
   color: #2a7282;
   margin-bottom: 15px;
 }
@@ -286,13 +287,54 @@
   background-color: #2a7282;
   color: #fff2ec;
   border: none;
-  padding: 13px;
+  padding: 14px;
   border-radius: 8px;
   font-size: 1.05rem;
   font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.2s;
 }
 
-.btn-checkout:hover {
-  background-color: #004e5d;
+/* Hover só onde existe mouse (no celular ele "gruda" depois do toque) */
+@media (hover: hover) {
+  .btn-add-card:hover,
+  .btn-checkout:hover {
+    background-color: #004e5d;
+  }
 }
+
+/* Alvos de toque maiores em telas touch */
+@media (pointer: coarse) {
+  .btn-qtd {
+    width: 36px;
+    height: 36px;
+  }
+
+  .btn-remover {
+    padding: 9px 10px;
+  }
+}
+
+/* Foco visível para navegação por teclado */
+.btn-add-card:focus-visible,
+.btn-qtd-card:focus-visible,
+.btn-remover-card:focus-visible,
+.btn-qtd:focus-visible,
+.btn-remover:focus-visible,
+.btn-fechar:focus-visible,
+.btn-checkout:focus-visible {
+  outline: 2px solid #004e5d;
+  outline-offset: 2px;
+}
+
+/* Respeita quem desativa animações no sistema */
+@media (prefers-reduced-motion: reduce) {
+  .drawer-overlay,
+  .drawer-conteudo,
+  .btn-add-card,
+  .btn-checkout {
+    transition: none;
+  }
+}
+
+body.drawer-aberto { overflow: hidden; }

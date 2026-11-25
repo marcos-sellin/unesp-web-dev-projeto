@@ -1,49 +1,43 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.foto-de-fundo-login{
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
+.foto-de-fundo-login {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
-.botao-confirma-login{
-    width: auto;
-    padding: 10px;
+.container-principal {
+  background-image: url('../assets/Foto-de-fundo-login.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: clamp(8px, 3vw, 24px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.container-principal{
-    background-image: url('../assets/Foto-de-fundo-login.jpg');
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-    width: 100%;
-    height: fit-content;
-    padding: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card-login{
-    background-color: rgb(248, 248, 230);
-    border: solid black 2px;
-    border-radius: 10px;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 420px;
-    width: 90%;
-    gap: 20px;
+.card-login {
+  background-color: rgb(248, 248, 230);
+  border: solid black 2px;
+  border-radius: 10px;
+  padding: clamp(15px, 4vw, 30px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(100%, 420px);
+  gap: clamp(14px, 3vw, 20px);
 }
 
 .texto-login {
   text-align: center;
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
 }
 
 .formulario-login {
@@ -56,29 +50,38 @@
 .formulario-login input {
   width: 100%;
   padding: 10px 14px;
+  font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
-  outline: none;
+}
+
+.formulario-login input:focus-visible {
+  border-color: #2b93ad;
+  outline: 2px solid #2b93ad;
+  outline-offset: 1px;
 }
 
 .botao-confirma-login {
   width: 100%;
   padding: 12px;
+  margin-top: 10px;
   background-color: #2b93ad;
   color: white;
   border: none;
   border-radius: 8px;
+  font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 10px;
-  transition: 1s ease;
+  transition: transform 0.2s ease;
 }
 
-.botao-confirma-login:hover{
-    scale: 1.067;
+@media (hover: hover) {
+  .botao-confirma-login:hover {
+    transform: scale(1.04);
+  }
 }
 
-.ja-possui-conta a{
+.ja-possui-conta a {
   color: rgb(36, 172, 218);
   font-weight: bold;
   text-decoration: none;

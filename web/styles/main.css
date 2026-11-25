@@ -116,16 +116,20 @@ h2 {
     font-size: 24px;
   }
 
+  h2 {
+    font-size: 20px;
+  }
+
   .slide {
     padding: 30px 45px;
     min-height: 200px;
   }
 
-  .carrosselTexto {
+  .carrosselText {
     font-size: 15px;
   }
 
-  .carrosselTextoTitle {
+  .carrosselTextTitle {
     font-size: 20px;
   }
 
