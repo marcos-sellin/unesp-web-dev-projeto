@@ -72,6 +72,37 @@ header nav {
   margin: 0 0 0 14px;
 }
 
+.btn-logout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 0 0 0;
+  border: none;
+  background: none;
+  font: inherit;          /* herda o tamanho de .loginVendasDiv (19px / 25px) */
+  color: #2a7282;
+  cursor: pointer;
+}
+
+.btn-logout:hover {
+  color: #004e5d;
+}
+
+.btn-logout:focus-visible {
+  outline: 2px solid #2a7282;
+  outline-offset: 4px;
+}
+
+.logoutIco {
+  width: 25px;
+  height: 25px;
+  stroke: #000;
+}
+
+.btn-logout[hidden] {
+  display: none;
+}
+
 @media screen and (min-width: 600px) {
   .linkSite {
     font-size: 25px;

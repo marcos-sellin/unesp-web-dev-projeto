@@ -36,7 +36,7 @@ function handleCadastro(email, senha) {
   localStorage.setItem('usuarios', JSON.stringify(usuarios));
 
   alert('Cadastro realizado com sucesso!');
-  window.location.href = '/web/login.html';
+  window.location.href = '/web/pages/login.html';
 }
 
 function handleLogin(email, senha) {

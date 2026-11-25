@@ -5,15 +5,27 @@
   <nav>
     <a href="#sobreLoc" class="linkSite">Sobre</a>
     <a href="#" class="linkSite">Serviços</a>
-    <a href="#" class="linkSite">Produtos</a>
+    <a href="#produtosLoc" class="linkSite">Produtos</a>
   </nav>
   <div class="loginVendasDiv">
-    <a href="" class="linkSite">
+    <a href="/web/pages/login.html" id="link-login" class="linkSite">
       <img class="loginIco" src="./assets/LoginIco.png" alt="LoginIcon" />
       <br />Login
     </a>
-    <a href="" class="linkSite">
-      <img class="cartIco" src="./assets/CartIco.png" alt="CartIcon" />
+    <button type="button" id="btn-logout" class="btn-logout" hidden>
+      <svg class="logoutIco" viewBox="3 3 18 18" fill="none" stroke="currentColor"
+          stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+        <polyline points="16 17 21 12 16 7" />
+        <line x1="21" y1="12" x2="9" y2="12" />
+      </svg>
+      Sair
+    </button>
+    <a href="#" id="btn-abrir-carrinho" class="linkSite">
+      <span class="cart-icon-wrapper">
+        <img class="cartIco" src="./assets/CartIco.png" alt="CartIcon" />
+        <span id="contador-carrinho" class="badge-carrinho">0</span>
+      </span>
       <br />Carrinho
     </a>
   </div>
